@@ -1,9 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
 .card-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #050505 0%, #232323 45%, #201f1f 110%);
+  background: linear-gradient(135deg, #050505 0%, #050505 45%, #101010 110%);
   padding: 20px;
 }
 
@@ -12,7 +23,9 @@
   max-width: 100%;
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 0 14px rgba(255, 255, 255, 0.18),
+    0 8px 22px rgba(0, 0, 0, 0.35);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -21,7 +34,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .signal-card::before {
   content: "";
   position: absolute;
@@ -44,6 +56,13 @@
   margin: 0 0 6px;
   font-size: 20px;
   color: #ffffff;
+}
+
+.instruction-box hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.28);
+  margin: 8px 0;
 }
 
 .instruction-box p {
@@ -69,7 +88,6 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 8px;
-  box-sizing: border-box;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.28);
 }
 
@@ -149,6 +167,37 @@
 }
 
 @media (max-width: 420px) {
+  .card-container {
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .signal-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 12px;
+  }
+
+  .instruction-box {
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .instruction-box h2 {
+    font-size: 16px;
+  }
+
+  .instruction-box p {
+    font-size: 12px;
+  }
+
+  .signal-strip {
+    gap: 6px;
+  }
+
   .signal-unit {
     width: 40px;
     height: 78px;
@@ -161,6 +210,38 @@
   }
 
   .timer {
+    margin-top: 10px;
     font-size: 21px;
+  }
+
+  .control-button {
+    margin-top: 8px;
+    padding: 9px;
+  }
+
+  .score-box {
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+
+  .score-list {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 340px) {
+  .signal-strip {
+    gap: 4px;
+  }
+
+  .signal-unit {
+    width: 34px;
+    height: 68px;
+    padding: 6px;
+  }
+
+  .signal-light {
+    width: 22px;
+    height: 22px;
   }
 }
