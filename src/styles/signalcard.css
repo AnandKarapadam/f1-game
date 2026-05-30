@@ -178,12 +178,12 @@ body,
   .signal-card {
     width: 100%;
     max-width: 340px;
-    padding: 12px;
+    padding: 16px 14px;
   }
 
   .instruction-box {
     max-width: none;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   .instruction-box h2 {
@@ -195,7 +195,9 @@ body,
   }
 
   .signal-strip {
-    gap: 6px;
+    gap: 7px;
+    margin-bottom: 14px;
+    margin: 30px 0;
   }
 
   .signal-unit {
@@ -210,22 +212,25 @@ body,
   }
 
   .timer {
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 14px;
     font-size: 21px;
   }
 
   .control-button {
-    margin-top: 8px;
-    padding: 9px;
+    margin-top: 0;
+    margin-bottom: 14px;
+    padding: 10px;
   }
 
   .score-box {
-    margin-top: 10px;
-    padding-top: 8px;
+    margin-top: 0;
+    padding-top: 12px;
   }
 
   .score-list {
-    margin-top: 8px;
+    margin-top: 12px;
+    gap: 6px;
   }
 }
 
