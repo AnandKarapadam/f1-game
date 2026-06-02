@@ -136,7 +136,7 @@ export default function SignalCard() {
         style={{ backgroundImage: `url(${f1pov})` }}
       >
         <div className="instruction-box">
-          <h2>TEST YOUR REACTION SPEED</h2>
+          <h2 className="heading">TEST YOUR REACTION SPEED</h2>
           <hr/>
           <p>
             Press Start, wait until the red lights disappear, then press Stop as
